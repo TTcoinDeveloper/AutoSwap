@@ -1,7 +1,7 @@
 var pg = require('pg'),
-	config = require('./config.js');
+//	config = require('./config.js');
 
-pg = new pg.Client(config.database.string);
+pg = new pg.Client("postgres://coinpair:MultiPort80@localhost:5432/paircoin");
 
 pg.connect(function(err, client, done) {
 	if (err) {

@@ -7,14 +7,21 @@ function wallet() {
 	var self = this;
 	for (var i = 0; i < config.allow.from.length; i++) {
 		var element = config.allow.from[i];
-
+/*
+                var client = new bitcoin.Client({
+                        host: '127.0.0.1',
+                        port: 5027,
+                        user: "user",
+                        pass: "ik9c2b5LhfElxod0x5cWcwcc99NdvMZp"
+                });
+*/
 		var client = new bitcoin.Client({
 			host: config.wallet[element].host,
 			port: config.wallet[element].port,
 			user: config.wallet[element].username,
 			pass: config.wallet[element].password
 		});
-		self.wallets.push({
+	self.wallets.push({
 			type: element,
 			client: client
 		});

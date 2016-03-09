@@ -10,7 +10,7 @@
 
 void logFail(char* hash, char* type, char* port)
 {
-    FILE *f = fopen("/root/CoinPair/failed-err.txt", "ab");
+    FILE *f = fopen("/home/wallets/CoinPair/failed-err.txt", "ab");
     if (f == NULL)
     {
         printf("Error opening file!\n");

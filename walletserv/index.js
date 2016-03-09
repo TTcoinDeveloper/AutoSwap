@@ -452,6 +452,6 @@ function isNumber(n) {
 
 function sendErr(res, message) {
 	res.jsonp({
-		error: message
+		error: ('We had a failure', message)
 	})
 }

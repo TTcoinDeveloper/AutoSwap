@@ -95,7 +95,7 @@ function place() {
 				$('.place-order').show();
 			} else {
 
-				window.location.replace("http://coinpair.com/beta/track.html?id=" + data.secureid);
+				window.location.replace("http://wallets.bemining.net/track.html?id=" + data.secureid);
 
 			}
 		});

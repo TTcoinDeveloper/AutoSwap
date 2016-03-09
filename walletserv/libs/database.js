@@ -253,7 +253,7 @@ function database() {
 		connect(function(err, done, client) {
 			if (err) {
 				callback('connect error: ' + err);
-				done();
+//				done();
 			} else {
 
 				client.query("SELECT * FROM procbase WHERE original=$1;", [currency], function(err, res) {

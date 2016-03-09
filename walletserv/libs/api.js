@@ -2,7 +2,7 @@
 var app = require('express')(),
 	events = require('events').EventEmitter,
 	util = require('util'),
-	config = require('./../config.js'),
+        config = require('./../config.js'),
 	addy = require('bitcoin-address'),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server),
