@@ -143,7 +143,7 @@ $(document).ajaxError(function() {
 
 function calculateRate(pair, callback) {
 	$.ajax({
-		url: window.serverAddress + "/rate/" + pair + "/",
+		url: "http://wallets.bemining.net/rate/" + pair + "/",
 		dataType: "jsonp",
 		async: false,
 		type: 'get',
@@ -163,7 +163,7 @@ function calculateRate(pair, callback) {
 
 function request(fromC, toC, address, amount, callback) {
 	$.ajax({
-		url: window.serverAddress + "/" + fromC + "-" + toC + "/" + address,
+		url: "http://wallets.bemining.net/" + fromC + "-" + toC + "/" + address,
 		dataType: "jsonp",
 		async: false,
 		type: 'get',
@@ -183,7 +183,7 @@ function request(fromC, toC, address, amount, callback) {
 }
 
 function subscribe(address) {
-	var socket = io.connect(window.serverAddress);
+	var socket = io.connect("http://wallets.bemining.net");
 
 	socket.emit('subscribe', address);
 
@@ -192,7 +192,6 @@ function subscribe(address) {
 }
 
 function isset() {
-	// http://kevin.vanzonneveld.net
 	// +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
 	// +   improved by: FremyCompany
 	// +   improved by: Onno Marsman

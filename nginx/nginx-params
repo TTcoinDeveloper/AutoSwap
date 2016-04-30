@@ -21,7 +21,7 @@ server {
 #    ssl_protocols        SSLv3 TLSv1;
 #    ssl_ciphers HIGH:!aNULL:!MD5;
 #
-#    location ~ ^/(images/|img/|javascript/|js/|css/|stylesheets/|flash/|media/|static/|track.html|index.html|robots.txt|humans.txt|favicon.ico) {
+#    location ~ ^/(images/|img/|javascript/|js/|css/|stylesheets/|flash/|media/|static/|track.html|index.html|faq.html|robots.txt|humans.txt|favicon.ico) {
 #      root /usr/share/nginx/html;
 #      access_log off;
 #      expires max;

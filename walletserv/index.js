@@ -17,8 +17,8 @@ var walletnotify = require('./libs/walletnotify.js'),
 
 
 var logger = new(winston.Logger)({
-        levels: config.logLevels.levels,
-        colors: config.logLevels.colors,
+//        levels: config.logLevels.levels,
+//        colors: config.logLevels.colors,
         transports: [
           new(winston.transports.Console)({
             level: 'debug',
@@ -32,7 +32,7 @@ var logger = new(winston.Logger)({
 
 //setting up our services
 rate = new rate();
-database = new database();
+database = new database(config.database);
 api = new api(config.ports.api);
 walletnotify = new walletnotify(config.ports.wnotify);
 blocknotify = new blocknotify(config.ports.bnotify),
@@ -69,9 +69,9 @@ setInterval(function() {
 
 
 function loadtest() {
-        var from = 'btc',
-                to = 'btc',
-                rec = 'mq7se9wy2egettFxPbmn99cK8v5AFq55Lx',
+        var from = 'INFX',
+                to = 'BTC',
+                rec = 'iSR5sJMELnaKfv7UM1qDrVLpTpSjNUGkMi',
                 start = new Date().getTime();
 
         generateAddresses(from, to, function(err, inputAddy) {
