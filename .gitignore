@@ -1,3 +1,5 @@
+walletserv/.env
+walletserv/logfile.log
 .DS_Store
 notify
 notify.exe
